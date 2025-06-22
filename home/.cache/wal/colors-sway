@@ -1,0 +1,21 @@
+set $wallpaper /home/mantas/Desktop/jackson-hendry-eodA_8CTOFo-unsplash.jpg
+
+set $background #020306
+set $foreground #a6abc2
+
+set $color0 #020306
+set $color1 #334575
+set $color2 #464E75
+set $color3 #483B96
+set $color4 #375087
+set $color5 #376593
+set $color6 #495788
+set $color7 #a6abc2
+set $color8 #747787
+set $color9 #334575
+set $color10 #464E75
+set $color11 #483B96
+set $color12 #375087
+set $color13 #376593
+set $color14 #495788
+set $color15 #a6abc2

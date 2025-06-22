@@ -1,0 +1,72 @@
+{
+  "layer": "top",
+  "position": "top",
+  "height": 32,
+  "modules-left": ["hyprland/workspaces", "custom/music"],
+  "modules-center": ["custom/window_icon", "hyprland/window"],
+  "modules-right": ["tray", "custom/spacer", "custom/coffee", "bluetooth", "pulseaudio", "battery", "network", "clock"],
+
+  "hyprland/workspaces": {
+    "format": "{icon}",
+    "on-click": "activate"
+  },
+  "hyprland/window": {
+    "max-length": 50
+  },
+  "bluetooth": {
+    "format-on": " on",
+    "format-off": "",
+    "format-disabled": " off",
+    "format-connected": " {device_alias}",
+    "tooltip-format": "{controller_alias}\t{controller_address}\n\n{num_connections} connected\n\n{device_enumerate}",
+    "on-click": "blueberry",
+  },
+  "custom/window_icon": {
+    "exec": "~/.config/waybar/modules/window_icon/window_icon.sh",
+    "interval": 1,
+    "format": "{}  ",
+  },
+  "custom/spacer" : {
+    "format": "  ",
+  },
+  "tray" : {
+     "icon-size": 21,
+     "spacing": 8,
+     "expand": true,
+  },
+  "custom/coffee" : {
+    "format": "{text}",
+    "interval": 1,
+    "return-type": "json",
+    "exec": "~/.config/waybar/modules/coffee/coffee_status.sh",
+    "on-click": "~/.config/waybar/modules/coffee/toggle_coffee.sh"
+  },
+  "pulseaudio": {
+    "format": "  {volume}%",
+    "on-click": "pavucontrol",
+    "on-scroll-up": "pactl set-sink-volume @DEFAULT_SINK@ +5%",
+    "on-scroll-down": "pactl set-sink-volume @DEFAULT_SINK@ -5%"
+  },
+  "battery": {
+    "format": "\udb80\udc79 {capacity}%",
+    "interval": 1,
+  },
+  "network": {
+    "format-wifi": "  {essid}",
+    "format-ethernet": "  {ipaddr}",
+    "on-click": "nm-connection-editor"
+  },
+  "custom/music": {
+    "format": "{}",
+    "return-type": "plain",
+    "exec": "python3 ~/.config/waybar/modules/wayves/wayves.py -o cava -i cava -a cava",
+    "on-click": "playerctl play-pause",
+    "on-click-right": "playerctl next",
+    "on-scroll-up": "playerctl previous",
+    "on-scroll-down": "playerctl next"
+  },
+  "clock": {
+    "format": "{:%a %d %b %H:%M}",
+    "on-click": "gnome-calendar"
+  }
+}

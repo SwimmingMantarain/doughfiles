@@ -1,0 +1,27 @@
+"$schema" = 'https://starship.rs/config-schema.json'
+
+[character] 
+success_symbol = '[➜](bold green)'                          
+
+[package]
+disabled = true
+
+
+[palettes.pywal]
+color0 = '#020306'
+color1 = '#334575'
+color2 = '#464E75'
+color3 = '#483B96'
+color4 = '#375087'
+color5 = '#376593'
+color6 = '#495788'
+color7 = '#a6abc2'
+color8 = '#747787'
+color9 = '#334575'
+color10 = '#464E75'
+color11 = '#483B96'
+color12 = '#375087'
+color13 = '#376593'
+color14 = '#495788'
+color15 = '#a6abc2'
+

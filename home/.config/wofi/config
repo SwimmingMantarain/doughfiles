@@ -1,0 +1,17 @@
+width=900
+height=520
+location=center
+mode=drun
+filter_rate=100
+no_actions=true
+halign=fill
+orientation=vertical
+content_halign=fill
+term=kitty
+columns=3
+hide_scroll=true
+image_size=38
+insensitive=true
+allow_images=true
+allow_markup=true
+prompt=Back for more? ...

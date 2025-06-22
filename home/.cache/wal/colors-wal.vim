@@ -1,0 +1,23 @@
+" Special
+let wallpaper  = "/home/mantas/Desktop/jackson-hendry-eodA_8CTOFo-unsplash.jpg"
+let background = "#020306"
+let foreground = "#a6abc2"
+let cursor     = "#a6abc2"
+
+" Colors
+let color0  = "#020306"
+let color1  = "#334575"
+let color2  = "#464E75"
+let color3  = "#483B96"
+let color4  = "#375087"
+let color5  = "#376593"
+let color6  = "#495788"
+let color7  = "#a6abc2"
+let color8  = "#747787"
+let color9  = "#334575"
+let color10 = "#464E75"
+let color11 = "#483B96"
+let color12 = "#375087"
+let color13 = "#376593"
+let color14 = "#495788"
+let color15 = "#a6abc2"

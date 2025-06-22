@@ -1,0 +1,62 @@
+@import url('file:///home/mantas/.cache/wal/colors-waybar.css');
+
+window#waybar {
+    background: rgba(2, 3, 6, 0.6);
+    color: @foreground;
+    border-radius: 0;
+    font-family: "JetBrainsMono Nerd Font", monospace;
+    font-size: 14px;
+    border-bottom: 2px solid @color4;
+}
+
+#workspaces button {
+    background: transparent;
+    color: @color7;
+    border: none;
+    padding: 0 8px;
+    margin: 0 2px;
+}
+#workspaces button.active {
+    background: @color4;
+    color: @background;
+    border-radius: 5px;
+}
+
+/* Shared modules */
+#pulseaudio, #battery, #network, #clock, #custom-music {
+    background: transparent;
+    color: @foreground;
+    padding: 0 10px;
+}
+
+#battery.charging { color: @color2; }
+#battery.warning  { color: @color3; }
+
+#custom-music {
+    font-family: "bargraph", "JetBrainsMono Nerd Font", monospace;
+    font-size: 18px;
+}
+
+#custom-coffee {
+    font-size: 22px;
+    padding: 0 10px;
+}
+
+#custom-coffee.active {
+    background: @color4;
+    color: @background;
+    border-radius: 5px;
+}
+
+/* hover stuff */
+#workspaces button:hover,
+#pulseaudio:hover,
+#battery:hover,
+#network:hover,
+#clock:hover,
+#custom-music:hover,
+#custom-coffee:hover {
+    background: rgba(123, 104, 238, 0.2); /* Adjust color/alpha as desired */
+    border-radius: 4px;
+    transition: background 0.2s;
+}

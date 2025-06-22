@@ -1,0 +1,111 @@
+/* Wofi GTK CSS Variables */
+@define-color background #020306;
+@define-color foreground_bright #c0c5dc;
+@define-color foreground #a6abc2;
+@define-color color1 #334575;
+@define-color color2 #464E75;
+@define-color color4 #375087;
+
+/* Transparency levels */
+@define-color window_bg alpha(@background, 0.85);
+@define-color input_bg alpha(@color1, 0.3);
+@define-color input_focus_bg alpha(@color1, 0.5);
+@define-color entry_selected_bg alpha(@color4, 0.4);
+@define-color entry_hover_bg alpha(@color2, 0.3);
+@define-color border_color alpha(@color1, 0.4);
+@define-color border_focus_color alpha(@color4, 0.8);
+@define-color entry_border_selected alpha(@color4, 0.6);
+@define-color entry_border_hover alpha(@color2, 0.5);
+
+window {
+    margin: 0px;
+    border: 2px solid @border_color;
+    background-color: @window_bg;
+    border-radius: 12px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4);
+    backdrop-filter: blur(50px) saturate(180%);
+    -webkit-backdrop-filter: blur(50px) saturate(180%);
+}
+
+#input {
+    margin: 8px;
+    border: 1px solid @border_color;
+    color: @foreground_bright;
+    background-color: @input_bg;
+    border-radius: 8px;
+    padding: 12px;
+    font-size: 14px;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    backdrop-filter: blur(30px) saturate(150%);
+    -webkit-backdrop-filter: blur(30px) saturate(150%);
+}
+
+#input:focus {
+    background-color: @input_focus_bg;
+    border-color: @border_focus_color;
+    box-shadow: 0 0 20px alpha(@color4, 0.4);
+    transform: scale(1.02);
+}
+
+#inner-box {
+    margin: 5px;
+    border: none;
+    background-color: transparent;
+}
+
+#outer-box {
+    margin: 5px;
+    border: none;
+    background-color: transparent;
+}
+
+#scroll {
+    margin: 0px;
+    border: none;
+    background-color: transparent;
+}
+
+#text {
+    margin: 8px;
+    border: none;
+    color: @foreground_bright;
+    font-size: 14px;
+    transition: color 0.2s ease;
+}
+
+#entry {
+    background-color: transparent;
+    border-radius: 8px;
+    margin: 3px;
+    padding: 12px;
+    transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+    opacity: 0.7;
+    border: 1px solid transparent;
+}
+
+#entry:selected {
+    background-color: @entry_selected_bg;
+    border-color: @entry_border_selected;
+    color: @foreground_bright;
+    opacity: 1;
+    transform: scale(1.03) translateX(5px);
+    box-shadow: 0 4px 16px alpha(@color4, 0.3);
+    backdrop-filter: blur(40px) saturate(160%);
+    -webkit-backdrop-filter: blur(40px) saturate(160%);
+}
+
+#entry:hover {
+    background-color: @entry_hover_bg;
+    border-color: @entry_border_hover;
+    opacity: 0.95;
+    transform: scale(1.01) translateX(3px);
+    box-shadow: 0 2px 8px alpha(@color2, 0.2);
+}
+
+#entry:selected #text {
+    color: @foreground_bright;
+}
+
+#entry:hover #text {
+    color: @foreground_bright;
+}
